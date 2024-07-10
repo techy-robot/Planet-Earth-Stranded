@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://b51sxefeu6042"]
+[gd_scene load_steps=21 format=3 uid="uid://b51sxefeu6042"]
 
 [ext_resource type="Shader" path="res://BasicSkyShader.gdshader" id="1_1wex7"]
 [ext_resource type="Material" uid="uid://bdhj6so3chp0e" path="res://Assets/Environment/Shaders/test_surface.tres" id="2_5hdbo"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://did3p25l52we" path="res://Assets/Environment/Shaders/fresnel_gradient.tres" id="4_jf54o"]
 [ext_resource type="Texture2D" uid="uid://dxxlswkgbkwak" path="res://Assets/Environment/Textures/Grid.png" id="5_5gfk3"]
 [ext_resource type="PackedScene" uid="uid://bd2s4wf2tu7sm" path="res://Scenes/Models/Player/PlayerController.tscn" id="6_kvsvt"]
+[ext_resource type="PackedScene" uid="uid://d37h2x7ngrtt3" path="res://Scenes/Models/grass.tscn" id="8_1ssi0"]
 [ext_resource type="PackedScene" uid="uid://bd2g0lvgf2pr4" path="res://Scenes/Models/ghibli tree.tscn" id="16_dmme4"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_4vf81"]
@@ -158,10 +159,10 @@ use_collision = true
 size = Vector3(8, 200, 12)
 
 [node name="Wall3" type="CSGBox3D" parent="."]
-transform = Transform3D(-0.887815, 0, -0.4602, 0, 1, 0, 0.4602, 0, -0.887815, 23.4912, 1.39954, 47.5064)
+transform = Transform3D(-0.887815, 0, -0.4602, 0, 1, 0, 0.4602, 0, -0.887815, 23.4912, 0.308877, 47.5064)
 material_override = SubResource("ShaderMaterial_jm846")
 use_collision = true
-size = Vector3(8, 5.05963, 12)
+size = Vector3(8, 2.8783, 12)
 
 [node name="Wall2" type="CSGBox3D" parent="."]
 transform = Transform3D(-0.846721, -0.26658, -0.460432, -0.300306, 0.953843, 0, 0.43918, 0.138271, -0.887695, 54.5711, -5.0513, 68.232)
@@ -183,3 +184,6 @@ transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, 25.3631, -2.04963, 1
 
 [node name="Ghibli Tree Leaves4" parent="." instance=ExtResource("16_dmme4")]
 transform = Transform3D(1.25, 0, 0, 0, 1.25, 0, 0, 0, 1.25, -69.0113, -2.04963, 79.031)
+
+[node name="GrassBaseTest" parent="." instance=ExtResource("8_1ssi0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9684, -2, 20)
